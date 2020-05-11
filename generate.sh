@@ -137,5 +137,11 @@ done
 # Dot file trailer
 echo "}" >> $dot
 
-# Generate svg file from fot file
-dot -T svg -o db.svg db.dot
+# Generate svg file in build directory
+rm -rf build
+mkdir build
+dot -T svg -o build/db.svg db.dot
+
+# Copy other files
+cp db.css index.html build/
+mv $dot build/
