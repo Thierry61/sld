@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inter repository dependencies</title>
+<script>
+    window.onload = (_ev) =>
+    {
+        let img = document.querySelector('img');
+        let svg = fetch(img.src)
+            .then(response => response.text())
+            .then(text => {
+                // Add link element pointing to stylesheet header
+                let styleSheet = text.match(/href="([^"]*css)"/)[1];
+                let linkEl = document.createElementNS('http://www.w3.org/1999/xhtml', 'link');
+                linkEl.setAttribute('rel', 'stylesheet');
+                linkEl.setAttribute('href', styleSheet);
+                linkEl.setAttribute('type', 'text/css');
+                document.head.appendChild(linkEl);
+                // Replace img element with svg
+                img.outerHTML = text;
+            })
+    }
+</script>
+</head>
+<body>
+<img src="./db.svg" />
+</body>
+</html>
