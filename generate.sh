@@ -1,7 +1,7 @@
 # List of repositories to analyze
 declare -A repos
 repos=([safe_browser]=master [safe_nodejs]=master [safe-api]=master [safe_client_libs]=master [quic-p2p]=master [safe_vault]=master [routing]=fleming
-[safe-nd]=master [self_encryption]=master [parsec]=master)
+[safe-nd]=master [self_encryption]=master [parsec]=master [safe_app_csharp]=master [safe-authenticator-mobile]=master [safe-mobile-browser]=master)
 
 # Output file
 dot=db.dot
@@ -94,6 +94,18 @@ do
     then
         echo "Special case $repo"
         repos_dependencies[$repo]="{\"native\":1}"
+    elif [ $repo == "safe_app_csharp" ]
+    then
+        echo "Special case $repo"
+        repos_dependencies[$repo]="{\"safe-ffi\":1}"
+    elif [ $repo == "safe-authenticator-mobile" ]
+    then
+        echo "Special case $repo"
+        repos_dependencies[$repo]="{\"safe_authenticator_ffi\":1}"
+    elif [ $repo == "safe-mobile-browser" ]
+    then
+        echo "Special case $repo"
+        repos_dependencies[$repo]="{\"safe_app_csharp\":1}"
     elif [ $repo == "safe_nodejs" ]
     then
         echo "Special case $repo"
