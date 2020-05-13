@@ -1,5 +1,9 @@
 # Interdependency SVG Generator
 
+![MaidSafe Interdependencies](https://raw.githubusercontent.com/maidsafe/interdependency-svg-generator/gh-pages/db.svg)
+
+Graph published [here](https://maidsafe.github.io/interdependency-svg-generator/)
+
 ## Overview
 
 A script which analyses selected primary MaidSafe components and generates a SVG graph showing the interdependencies between them. This script is triggered each night by CI to remain up to date.
