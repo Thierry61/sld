@@ -84,6 +84,14 @@ function analyze_dependencies () {
     fi
 }
 
+function set_repos_in_workspace () {
+    for subdir in $*
+    do
+        repos_in_workspace[$subdir]=$repo
+        printf "|<K_$subdir> $subdir" >> $dot
+    done
+}
+
 for repo in "${!repos[@]}"
 do
     # No root key for safe-api (because it is both a root crate and a sub-crate)
@@ -94,11 +102,13 @@ do
         root_key="<K_$repo> "
     fi
     printf "\n\"$repo\" [\n  label = \"$root_key\\N" >> $dot
-    # Special cases for npm repos
+    # Special cases for C# repos
     if [ $repo == "safe_app_csharp" ]
     then
         echo "Special case $repo"
-        repos_dependencies[$repo]="safe-ffi"
+        set_repos_in_workspace SafeApp SafeApp.AppBindings SafeApp.Core
+        repos_dependencies["SafeApp.AppBindings"]="SafeApp.Core safe-ffi"
+        repos_dependencies["SafeApp"]="SafeApp.AppBindings SafeApp.Core"
     elif [ $repo == "safe-authenticator-mobile" ]
     then
         echo "Special case $repo"
@@ -152,8 +162,7 @@ do
                         curl -s "https://raw.githubusercontent.com/maidsafe/$repo/${repos[$repo]}/$subdir/Cargo.toml" > Cargo.toml
                         if [ "$(<Cargo.toml)" != "404: Not Found" ]
                         then
-                            repos_in_workspace[$subdir]=$repo
-                            printf "|<K_$subdir> $subdir" >> $dot
+                            set_repos_in_workspace $subdir
                             repos_dependencies[$subdir]=$($toml get Cargo.toml dependencies | jq -r 'keys[]')
                         fi
                     fi
