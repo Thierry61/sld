@@ -1,7 +1,8 @@
 # List of repositories to analyze
+# Note: A dictionary instead of an array (possible future usage: an alias name for a repo having an internal name different from its external name)
 declare -A repos
-repos=([safe_browser]=master [safe-nodejs]=master [safe-api]=master [safe_client_libs]=master [quic-p2p]=master [safe_vault]=master [routing]=fleming
-[safe-nd]=master [self_encryption]=master [parsec]=master [safe_app_csharp]=master [safe-authenticator-mobile]=master [safe-mobile-browser]=master)
+repos=([safe_browser]="" [safe-nodejs]="" [safe-api]="" [safe_client_libs]="" [quic-p2p]="" [safe_vault]="" [routing]=""
+[safe-nd]="" [self_encryption]="" [parsec]="" [safe_app_csharp]="" [safe-authenticator-mobile]="" [safe-mobile-browser]="")
 
 # Output file
 dot=db.dot
@@ -59,7 +60,7 @@ function analyze_dependencies () {
             src_workspace=${repos_in_workspace[$repo]}
             dst_workspace=${repos_in_workspace[$dependency]}
             # Only links to listed repositories
-            if [ $dst_workspace ] || [ ${repos[$dependency]} ]
+            if [ $dst_workspace ] || [ -v repos[$dependency] ]
             then
                 if [ $src_workspace ]
                 then
@@ -120,12 +121,13 @@ do
     else
         echo "Analyzing $repo"
         # Test if it is a Rust repo by testing the most used language
-        curl -s https://api.github.com/repos/maidsafe/$repo/languages?ref=${repos[$repo]} > languages.txt
-        language=$(jq -r 'keys_unsorted | .[0]' languages.txt)
+        curl -s https://api.github.com/repos/maidsafe/$repo > repo.txt
+        language=$(jq -r '.language' repo.txt)
+        default_branch=$(jq -r '.default_branch' repo.txt)
         if [ $language == 'Rust' ]
         then
             # Test if root dir contains a Cargo.toml
-            curl -s "https://raw.githubusercontent.com/maidsafe/$repo/${repos[$repo]}/Cargo.toml" > Cargo.toml
+            curl -s "https://raw.githubusercontent.com/maidsafe/$repo/$default_branch/Cargo.toml" > Cargo.toml
             if [ "$(<Cargo.toml)" == "404: Not Found" ]
             then
                 # No Cargo.toml file at the root. This means it is a mixed repo like safe-nodejs (Rust + Javascript)
@@ -146,7 +148,7 @@ do
                 if [ "$(<Cargo.toml)" == "404: Not Found" ]
                 then
                     # Mixed repo => get root directories
-                    curl -s https://api.github.com/repos/maidsafe/$repo/contents?ref=${repos[$repo]} > contents.txt
+                    curl -s https://api.github.com/repos/maidsafe/$repo/contents?ref=$default_branch > contents.txt
                     subdirs=$(jq -r '.[] | select(.type == "dir") .name' contents.txt)
                     rm contents.txt
                 else
@@ -159,7 +161,7 @@ do
                     if [ $subdir != "tests" ] && [ $subdir != ".github" ]
                     then
                         # Include subcrates having a Cargo.tom file
-                        curl -s "https://raw.githubusercontent.com/maidsafe/$repo/${repos[$repo]}/$subdir/Cargo.toml" > Cargo.toml
+                        curl -s "https://raw.githubusercontent.com/maidsafe/$repo/$default_branch/$subdir/Cargo.toml" > Cargo.toml
                         if [ "$(<Cargo.toml)" != "404: Not Found" ]
                         then
                             set_repos_in_workspace $subdir
@@ -175,12 +177,12 @@ do
         elif [ $language == 'JavaScript' ] || [ $language == 'TypeScript' ]
         then
             # Get dependencies from package.json file for JavaScript repo
-            curl -s "https://raw.githubusercontent.com/maidsafe/$repo/${repos[$repo]}/package.json" > package.json
+            curl -s "https://raw.githubusercontent.com/maidsafe/$repo/$default_branch/package.json" > package.json
             dependencies=$(jq -r '.dependencies | keys[] | select(test("^[^@]"))' package.json)
             repos_dependencies[$repo]=$dependencies
             rm package.json
         fi
-        rm languages.txt
+        rm repo.txt
     fi
     printf "\"\n]\n" >> $dot
 done
