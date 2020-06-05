@@ -1,8 +1,8 @@
 # List of repositories to analyze
 # Note: A dictionary instead of an array (possible future usage: an alias name for a repo having an internal name different from its external name)
 declare -A repos
-repos=([safe_browser]="" [safe-nodejs]="" [safe-api]="" [safe_client_libs]="" [quic-p2p]="" [safe_vault]="" [routing]=""
-[safe-nd]="" [self_encryption]="" [parsec]="" [safe_app_csharp]="" [safe-authenticator-mobile]="" [safe-mobile-browser]="")
+repos=([safe-browser]="" [safe-nodejs]="" [safe-api]="" [safe-client-libs]="" [quic-p2p]="" [safe-vault]="" [routing]=""
+[safe-nd]="" [self_encryption]="" [parsec]="" [safe-app-csharp]="" [safe-authenticator-mobile]="" [safe-mobile-browser]="")
 
 # Output file
 dot=db.dot
@@ -104,7 +104,7 @@ do
     fi
     printf "\n\"$repo\" [\n  label = \"$root_key\\N" >> $dot
     # Special cases for C# repos
-    if [ $repo == "safe_app_csharp" ]
+    if [ $repo == "safe-app-csharp" ]
     then
         echo "Special case $repo"
         set_repos_in_workspace SafeApp SafeApp.AppBindings SafeApp.Core
@@ -117,7 +117,7 @@ do
     elif [ $repo == "safe-mobile-browser" ]
     then
         echo "Special case $repo"
-        repos_dependencies[$repo]="safe_app_csharp"
+        repos_dependencies[$repo]="safe-app-csharp"
     else
         echo "Analyzing $repo"
         # Test if it is a Rust repo by testing the most used language
