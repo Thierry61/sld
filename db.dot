@@ -46,7 +46,7 @@ digraph g {
 ]
 
 "safe-nodejs" [
-  label = "<K_safe-nodejs> \N|<K_native> native"
+  label = "<K_safe-nodejs> \N"
 ]
 
 "safe-app-csharp" [
@@ -91,7 +91,6 @@ digraph g {
 "safe-api":"K_safe-ffi" -> "safe-nd":"K_safe-nd"
 "safe-api":"K_safe-ffi" -> "safe-client-libs":"K_safe_authenticator_ffi"
 "safe-api":"K_safe-ffi" -> "safe-client-libs":"K_safe_core"
-"safe-nodejs":"K_native" -> "safe-api":"K_safe-api"
 "safe-client-libs":"K_safe_authenticator" -> "safe-nd":"K_safe-nd"
 "safe-client-libs":"K_safe_authenticator" -> "safe-client-libs":"K_safe_core"	[color="grey"]
 "safe-client-libs":"K_safe_authenticator_ffi" -> "safe-nd":"K_safe-nd"
