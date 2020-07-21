@@ -13,26 +13,26 @@
 <!-- safe&#45;mobile&#45;browser -->
 <g id="node1" class="node">
 <title>safe&#45;mobile&#45;browser</title>
-<polygon fill="none" stroke="#000000" points="0,-271.5 0,-307.5 168,-307.5 168,-271.5 0,-271.5"/>
-<text text-anchor="middle" x="84" y="-286.4" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;mobile&#45;browser</text>
+<polygon fill="none" stroke="#000000" points="0,-235.5 0,-271.5 168,-271.5 168,-235.5 0,-235.5"/>
+<text text-anchor="middle" x="84" y="-250.4" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;mobile&#45;browser</text>
 </g>
 <!-- safe&#45;app&#45;csharp -->
 <g id="node9" class="node">
 <title>safe&#45;app&#45;csharp</title>
-<polygon fill="none" stroke="#000000" points="278,-215.5 278,-299.5 450,-299.5 450,-215.5 278,-215.5"/>
-<text text-anchor="middle" x="364" y="-285.9" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;app&#45;csharp</text>
-<polyline fill="none" stroke="#000000" points="278,-278.5 450,-278.5 "/>
-<text text-anchor="middle" x="364" y="-264.9" font-family="verdana" font-size="12.00" fill="#000000">SafeApp</text>
-<polyline fill="none" stroke="#000000" points="278,-257.5 450,-257.5 "/>
-<text text-anchor="middle" x="364" y="-243.9" font-family="verdana" font-size="12.00" fill="#000000">SafeApp.AppBindings</text>
-<polyline fill="none" stroke="#000000" points="278,-236.5 450,-236.5 "/>
-<text text-anchor="middle" x="364" y="-222.9" font-family="verdana" font-size="12.00" fill="#000000">SafeApp.Core</text>
+<polygon fill="none" stroke="#000000" points="278,-179.5 278,-263.5 450,-263.5 450,-179.5 278,-179.5"/>
+<text text-anchor="middle" x="364" y="-249.9" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;app&#45;csharp</text>
+<polyline fill="none" stroke="#000000" points="278,-242.5 450,-242.5 "/>
+<text text-anchor="middle" x="364" y="-228.9" font-family="verdana" font-size="12.00" fill="#000000">SafeApp</text>
+<polyline fill="none" stroke="#000000" points="278,-221.5 450,-221.5 "/>
+<text text-anchor="middle" x="364" y="-207.9" font-family="verdana" font-size="12.00" fill="#000000">SafeApp.AppBindings</text>
+<polyline fill="none" stroke="#000000" points="278,-200.5 450,-200.5 "/>
+<text text-anchor="middle" x="364" y="-186.9" font-family="verdana" font-size="12.00" fill="#000000">SafeApp.Core</text>
 </g>
 <!-- safe&#45;mobile&#45;browser&#45;&gt;safe&#45;app&#45;csharp -->
 <g id="edge3" class="edge">
 <title>safe&#45;mobile&#45;browser:K_safe&#45;mobile&#45;browser&#45;&gt;safe&#45;app&#45;csharp:K_safe&#45;app&#45;csharp</title>
-<path fill="none" stroke="#006400" d="M168.032,-289.5C200.5582,-289.5 238.2427,-289.5 272.9083,-289.5"/>
-<polygon fill="#006400" stroke="#006400" points="278,-289.5 273,-291.7501 275.5,-289.5 273,-289.5001 273,-289.5001 273,-289.5001 275.5,-289.5 273,-287.2501 278,-289.5 278,-289.5"/>
+<path fill="none" stroke="#006400" d="M168.032,-253.5C200.5582,-253.5 238.2427,-253.5 272.9083,-253.5"/>
+<polygon fill="#006400" stroke="#006400" points="278,-253.5 273,-255.7501 275.5,-253.5 273,-253.5001 273,-253.5001 273,-253.5001 275.5,-253.5 273,-251.2501 278,-253.5 278,-253.5"/>
 </g>
 <!-- parsec -->
 <g id="node2" class="node">
@@ -91,19 +91,19 @@
 <polygon fill="#c0c0c0" stroke="#c0c0c0" points="869.9797,-281.0583 865.2662,-283.8592 867.4957,-281.341 865.0118,-281.6236 865.0118,-281.6236 865.0118,-281.6236 867.4957,-281.341 864.7574,-279.388 869.9797,-281.0583 869.9797,-281.0583"/>
 </g>
 <!-- safe&#45;client&#45;libs&#45;&gt;safe&#45;client&#45;libs -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>safe&#45;client&#45;libs:K_safe_authenticator&#45;&gt;safe&#45;client&#45;libs:K_safe_core</title>
 <path fill="none" stroke="#c0c0c0" d="M869.9797,-331.0367C836.642,-328.8532 809,-321.3789 809,-305.5 809,-290.4274 833.9059,-282.9276 864.9479,-280.3373"/>
 <polygon fill="#c0c0c0" stroke="#c0c0c0" points="869.9797,-279.9633 865.1603,-282.5778 867.4866,-280.1486 864.9935,-280.334 864.9935,-280.334 864.9935,-280.334 867.4866,-280.1486 864.8267,-278.0901 869.9797,-279.9633 869.9797,-279.9633"/>
 </g>
 <!-- safe&#45;client&#45;libs&#45;&gt;safe&#45;client&#45;libs -->
-<g id="edge26" class="edge">
+<g id="edge27" class="edge">
 <title>safe&#45;client&#45;libs:K_safe_authenticator_ffi&#45;&gt;safe&#45;client&#45;libs:K_safe_authenticator</title>
 <path fill="none" stroke="#c0c0c0" d="M869.9797,-299.8682C836.642,-300.8204 809,-305.6787 809,-316 809,-325.7972 833.9059,-330.672 864.9479,-331.9563"/>
 <polygon fill="#c0c0c0" stroke="#c0c0c0" points="869.9797,-332.1318 864.9043,-334.2061 867.4812,-332.0446 864.9828,-331.9574 864.9828,-331.9574 864.9828,-331.9574 867.4812,-332.0446 865.0612,-329.7088 869.9797,-332.1318 869.9797,-332.1318"/>
 </g>
 <!-- safe&#45;client&#45;libs&#45;&gt;safe&#45;client&#45;libs -->
-<g id="edge27" class="edge">
+<g id="edge28" class="edge">
 <title>safe&#45;client&#45;libs:K_safe_authenticator_ffi&#45;&gt;safe&#45;client&#45;libs:K_safe_core</title>
 <path fill="none" stroke="#c0c0c0" d="M869.9797,-311.1318C836.642,-310.1796 809,-305.3213 809,-295 809,-285.2028 833.9059,-280.328 864.9479,-279.0437"/>
 <polygon fill="#c0c0c0" stroke="#c0c0c0" points="869.9797,-278.8682 865.0612,-281.2912 867.4812,-278.9554 864.9828,-279.0426 864.9828,-279.0426 864.9828,-279.0426 867.4812,-278.9554 864.9043,-276.7939 869.9797,-278.8682 869.9797,-278.8682"/>
@@ -127,13 +127,13 @@
 <polygon fill="#006400" stroke="#006400" points="1176.38,-251.7751 1171.7402,-254.6966 1173.9042,-252.1217 1171.4283,-252.4683 1171.4283,-252.4683 1171.4283,-252.4683 1173.9042,-252.1217 1171.1163,-250.24 1176.38,-251.7751 1176.38,-251.7751"/>
 </g>
 <!-- safe&#45;client&#45;libs&#45;&gt;safe&#45;nd -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>safe&#45;client&#45;libs:K_safe_authenticator&#45;&gt;safe&#45;nd:K_safe&#45;nd</title>
 <path fill="none" stroke="#006400" d="M1044,-326.5C1107.1157,-326.5 1117.4783,-294.916 1171.4967,-267.0109"/>
 <polygon fill="#006400" stroke="#006400" points="1176.1581,-264.667 1172.7019,-268.9234 1173.9246,-265.7901 1171.691,-266.9132 1171.691,-266.9132 1171.691,-266.9132 1173.9246,-265.7901 1170.6802,-264.903 1176.1581,-264.667 1176.1581,-264.667"/>
 </g>
 <!-- safe&#45;client&#45;libs&#45;&gt;safe&#45;nd -->
-<g id="edge25" class="edge">
+<g id="edge26" class="edge">
 <title>safe&#45;client&#45;libs:K_safe_authenticator_ffi&#45;&gt;safe&#45;nd:K_safe&#45;nd</title>
 <path fill="none" stroke="#006400" d="M1044,-305.5C1057.0291,-305.5 1123.4819,-282.3122 1171.2544,-265.0099"/>
 <polygon fill="#006400" stroke="#006400" points="1176.1074,-263.2492 1172.1745,-267.0696 1173.7573,-264.1019 1171.4071,-264.9545 1171.4071,-264.9545 1171.4071,-264.9545 1173.7573,-264.1019 1170.6398,-262.8394 1176.1074,-263.2492 1176.1074,-263.2492"/>
@@ -183,26 +183,10 @@
 <!-- safe&#45;nodejs -->
 <g id="node8" class="node">
 <title>safe&#45;nodejs</title>
-<polygon fill="none" stroke="#000000" points="307,-326.5 307,-362.5 421,-362.5 421,-326.5 307,-326.5"/>
-<text text-anchor="middle" x="364" y="-341.4" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;nodejs</text>
-</g>
-<!-- safe&#45;app&#45;csharp&#45;&gt;safe&#45;app&#45;csharp -->
-<g id="edge1" class="edge">
-<title>safe&#45;app&#45;csharp:K_SafeApp.AppBindings&#45;&gt;safe&#45;app&#45;csharp:K_SafeApp.Core</title>
-<path fill="none" stroke="#c0c0c0" d="M277.9345,-252.1422C244.6582,-251.2153 217,-246.3594 217,-236 217,-226.1667 241.9205,-221.292 272.9114,-220.0296"/>
-<polygon fill="#c0c0c0" stroke="#c0c0c0" points="277.9345,-219.8578 273.0144,-222.2775 275.4359,-219.9433 272.9374,-220.0288 272.9374,-220.0288 272.9374,-220.0288 275.4359,-219.9433 272.8604,-217.7802 277.9345,-219.8578 277.9345,-219.8578"/>
-</g>
-<!-- safe&#45;app&#45;csharp&#45;&gt;safe&#45;app&#45;csharp -->
-<g id="edge15" class="edge">
-<title>safe&#45;app&#45;csharp:K_SafeApp&#45;&gt;safe&#45;app&#45;csharp:K_SafeApp.AppBindings</title>
-<path fill="none" stroke="#c0c0c0" d="M277.9345,-274.0907C244.6582,-273.1055 217,-268.125 217,-257.5 217,-247.4146 241.9205,-242.4149 272.9114,-241.0905"/>
-<polygon fill="#c0c0c0" stroke="#c0c0c0" points="277.9345,-240.9093 273.0189,-243.3382 275.4361,-240.9995 272.9377,-241.0897 272.9377,-241.0897 272.9377,-241.0897 275.4361,-240.9995 272.8566,-238.8412 277.9345,-240.9093 277.9345,-240.9093"/>
-</g>
-<!-- safe&#45;app&#45;csharp&#45;&gt;safe&#45;app&#45;csharp -->
-<g id="edge16" class="edge">
-<title>safe&#45;app&#45;csharp:K_SafeApp&#45;&gt;safe&#45;app&#45;csharp:K_SafeApp.Core</title>
-<path fill="none" stroke="#c0c0c0" d="M277.9345,-273.0092C244.6582,-270.7983 217,-263.2031 217,-247 217,-231.6197 241.9205,-223.9952 272.9114,-221.3697"/>
-<polygon fill="#c0c0c0" stroke="#c0c0c0" points="277.9345,-220.9908 273.1179,-223.6106 275.4416,-221.1789 272.9486,-221.367 272.9486,-221.367 272.9486,-221.367 275.4416,-221.1789 272.7794,-219.1233 277.9345,-220.9908 277.9345,-220.9908"/>
+<polygon fill="none" stroke="#000000" points="307,-282.5 307,-324.5 421,-324.5 421,-282.5 307,-282.5"/>
+<text text-anchor="middle" x="364" y="-310.9" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;nodejs</text>
+<polyline fill="none" stroke="#000000" points="307,-303.5 421,-303.5 "/>
+<text text-anchor="middle" x="364" y="-289.9" font-family="verdana" font-size="12.00" fill="#000000">native</text>
 </g>
 <!-- safe&#45;api -->
 <g id="node12" class="node">
@@ -220,11 +204,35 @@
 <polyline fill="none" stroke="#000000" points="601.5,-215.5 718.5,-215.5 "/>
 <text text-anchor="middle" x="660" y="-201.9" font-family="verdana" font-size="12.00" fill="#000000">jsonrpc&#45;quic</text>
 </g>
+<!-- safe&#45;nodejs&#45;&gt;safe&#45;api -->
+<g id="edge23" class="edge">
+<title>safe&#45;nodejs:K_native&#45;&gt;safe&#45;api:K_safe&#45;api</title>
+<path fill="none" stroke="#006400" d="M421,-292.5C499.974,-292.5 519.4648,-269.5202 595.8829,-268.5328"/>
+<polygon fill="#006400" stroke="#006400" points="601,-268.5 596.0145,-270.7821 598.5001,-268.5161 596.0001,-268.5321 596.0001,-268.5321 596.0001,-268.5321 598.5001,-268.5161 595.9857,-266.2822 601,-268.5 601,-268.5"/>
+</g>
+<!-- safe&#45;app&#45;csharp&#45;&gt;safe&#45;app&#45;csharp -->
+<g id="edge1" class="edge">
+<title>safe&#45;app&#45;csharp:K_SafeApp.AppBindings&#45;&gt;safe&#45;app&#45;csharp:K_SafeApp.Core</title>
+<path fill="none" stroke="#c0c0c0" d="M277.9345,-216.1422C244.6582,-215.2153 217,-210.3594 217,-200 217,-190.1667 241.9205,-185.292 272.9114,-184.0296"/>
+<polygon fill="#c0c0c0" stroke="#c0c0c0" points="277.9345,-183.8578 273.0144,-186.2775 275.4359,-183.9433 272.9374,-184.0288 272.9374,-184.0288 272.9374,-184.0288 275.4359,-183.9433 272.8604,-181.7802 277.9345,-183.8578 277.9345,-183.8578"/>
+</g>
+<!-- safe&#45;app&#45;csharp&#45;&gt;safe&#45;app&#45;csharp -->
+<g id="edge15" class="edge">
+<title>safe&#45;app&#45;csharp:K_SafeApp&#45;&gt;safe&#45;app&#45;csharp:K_SafeApp.AppBindings</title>
+<path fill="none" stroke="#c0c0c0" d="M277.9345,-238.0907C244.6582,-237.1055 217,-232.125 217,-221.5 217,-211.4146 241.9205,-206.4149 272.9114,-205.0905"/>
+<polygon fill="#c0c0c0" stroke="#c0c0c0" points="277.9345,-204.9093 273.0189,-207.3382 275.4361,-204.9995 272.9377,-205.0897 272.9377,-205.0897 272.9377,-205.0897 275.4361,-204.9995 272.8566,-202.8412 277.9345,-204.9093 277.9345,-204.9093"/>
+</g>
+<!-- safe&#45;app&#45;csharp&#45;&gt;safe&#45;app&#45;csharp -->
+<g id="edge16" class="edge">
+<title>safe&#45;app&#45;csharp:K_SafeApp&#45;&gt;safe&#45;app&#45;csharp:K_SafeApp.Core</title>
+<path fill="none" stroke="#c0c0c0" d="M277.9345,-237.0092C244.6582,-234.7983 217,-227.2031 217,-211 217,-195.6197 241.9205,-187.9952 272.9114,-185.3697"/>
+<polygon fill="#c0c0c0" stroke="#c0c0c0" points="277.9345,-184.9908 273.1179,-187.6106 275.4416,-185.1789 272.9486,-185.367 272.9486,-185.367 272.9486,-185.367 275.4416,-185.1789 272.7794,-183.1233 277.9345,-184.9908 277.9345,-184.9908"/>
+</g>
 <!-- safe&#45;app&#45;csharp&#45;&gt;safe&#45;api -->
 <g id="edge2" class="edge">
 <title>safe&#45;app&#45;csharp:K_SafeApp.AppBindings&#45;&gt;safe&#45;api:K_safe&#45;ffi</title>
-<path fill="none" stroke="#006400" d="M450,-246.5C515.4071,-246.5 533.0044,-246.5 595.9837,-246.5"/>
-<polygon fill="#006400" stroke="#006400" points="601,-246.5 596,-248.7501 598.5,-246.5 596,-246.5001 596,-246.5001 596,-246.5001 598.5,-246.5 596,-244.2501 601,-246.5 601,-246.5"/>
+<path fill="none" stroke="#006400" d="M450,-210.5C517.2403,-210.5 531.3109,-244.6951 595.8512,-246.4316"/>
+<polygon fill="#006400" stroke="#006400" points="601,-246.5 595.9705,-248.6832 598.5002,-246.4667 596.0004,-246.4334 596.0004,-246.4334 596.0004,-246.4334 598.5002,-246.4667 596.0304,-244.1836 601,-246.5 601,-246.5"/>
 </g>
 <!-- safe&#45;authenticator&#45;mobile -->
 <g id="node11" class="node">
@@ -233,10 +241,10 @@
 <text text-anchor="middle" x="660" y="-395.4" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;authenticator&#45;mobile</text>
 </g>
 <!-- safe&#45;authenticator&#45;mobile&#45;&gt;safe&#45;client&#45;libs -->
-<g id="edge34" class="edge">
+<g id="edge35" class="edge">
 <title>safe&#45;authenticator&#45;mobile:K_safe&#45;authenticator&#45;mobile&#45;&gt;safe&#45;client&#45;libs:K_safe_authenticator_ffi</title>
-<path fill="none" stroke="#006400" d="M760.4222,-380.3373C796.1942,-366.5241 802.5415,-356.8231 834,-334.5 849.1849,-323.7248 849.5397,-308.6623 864.7647,-305.9327"/>
-<polygon fill="#006400" stroke="#006400" points="870,-305.5 865.2024,-308.1543 867.5085,-305.706 865.017,-305.912 865.017,-305.912 865.017,-305.912 867.5085,-305.706 864.8316,-303.6696 870,-305.5 870,-305.5"/>
+<path fill="none" stroke="#006400" d="M760.424,-380.3342C796.3434,-366.2576 802.2666,-355.8424 834,-333.5 849.0201,-322.9249 849.7353,-308.5211 864.8241,-305.9133"/>
+<polygon fill="#006400" stroke="#006400" points="870,-305.5 865.195,-308.1409 867.5079,-305.699 865.0159,-305.8981 865.0159,-305.8981 865.0159,-305.8981 867.5079,-305.699 864.8367,-303.6552 870,-305.5 870,-305.5"/>
 </g>
 <!-- safe&#45;api&#45;&gt;safe&#45;client&#45;libs -->
 <g id="edge21" class="edge">
@@ -251,19 +259,19 @@
 <polygon fill="#006400" stroke="#006400" points="870,-284.5 864.8607,-286.4106 867.5056,-284.3328 865.0112,-284.1657 865.0112,-284.1657 865.0112,-284.1657 867.5056,-284.3328 865.1616,-281.9207 870,-284.5 870,-284.5"/>
 </g>
 <!-- safe&#45;api&#45;&gt;safe&#45;client&#45;libs -->
-<g id="edge31" class="edge">
+<g id="edge32" class="edge">
 <title>safe&#45;api:K_safe&#45;api&#45;&gt;safe&#45;client&#45;libs:K_safe_app</title>
 <path fill="none" stroke="#006400" d="M719,-268.5C764.6568,-268.5 754.6046,-317.2395 796,-336.5 824.4982,-349.7596 835.5316,-347.78 864.7412,-347.5239"/>
 <polygon fill="#006400" stroke="#006400" points="870,-347.5 865.0103,-349.7728 867.5,-347.5114 865.0001,-347.5228 865.0001,-347.5228 865.0001,-347.5228 867.5,-347.5114 864.9898,-345.2728 870,-347.5 870,-347.5"/>
 </g>
 <!-- safe&#45;api&#45;&gt;safe&#45;client&#45;libs -->
-<g id="edge32" class="edge">
+<g id="edge33" class="edge">
 <title>safe&#45;api:K_safe&#45;api&#45;&gt;safe&#45;client&#45;libs:K_safe_authenticator</title>
 <path fill="none" stroke="#006400" d="M719,-268.5C789.0662,-268.5 797.7003,-323.5921 864.6469,-326.3897"/>
 <polygon fill="#006400" stroke="#006400" points="870,-326.5 864.9547,-328.6465 867.5005,-326.4485 865.0011,-326.3969 865.0011,-326.3969 865.0011,-326.3969 867.5005,-326.4485 865.0474,-324.1474 870,-326.5 870,-326.5"/>
 </g>
 <!-- safe&#45;api&#45;&gt;safe&#45;client&#45;libs -->
-<g id="edge33" class="edge">
+<g id="edge34" class="edge">
 <title>safe&#45;api:K_safe&#45;api&#45;&gt;safe&#45;client&#45;libs:K_safe_core</title>
 <path fill="none" stroke="#006400" d="M719,-268.5C784.7733,-268.5 801.6662,-283.6978 864.9572,-284.4696"/>
 <polygon fill="#006400" stroke="#006400" points="870,-284.5 864.9865,-286.7197 867.5,-284.4849 865.0001,-284.4697 865.0001,-284.4697 865.0001,-284.4697 867.5,-284.4849 865.0137,-282.2198 870,-284.5 870,-284.5"/>
@@ -275,7 +283,7 @@
 <polygon fill="#006400" stroke="#006400" points="1176.2056,-228.305 1170.8245,-227.2527 1174.165,-226.8606 1172.1245,-225.4162 1172.1245,-225.4162 1172.1245,-225.4162 1174.165,-226.8606 1173.4245,-223.5797 1176.2056,-228.305 1176.2056,-228.305"/>
 </g>
 <!-- safe&#45;api&#45;&gt;safe&#45;nd -->
-<g id="edge30" class="edge">
+<g id="edge31" class="edge">
 <title>safe&#45;api:K_safe&#45;api&#45;&gt;safe&#45;nd:K_safe&#45;nd</title>
 <path fill="none" stroke="#006400" d="M719,-268.5C754.1449,-268.5 761.1059,-254.6906 796,-250.5 930.7518,-234.3171 1091.2332,-239.3012 1171.1164,-243.406"/>
 <polygon fill="#006400" stroke="#006400" points="1176.2605,-243.6749 1171.1499,-245.6608 1173.7639,-243.5444 1171.2673,-243.4138 1171.2673,-243.4138 1171.2673,-243.4138 1173.7639,-243.5444 1171.3848,-241.1669 1176.2605,-243.6749 1176.2605,-243.6749"/>
@@ -299,13 +307,13 @@
 <polygon fill="#c0c0c0" stroke="#c0c0c0" points="601.4443,-274.248 596.4558,-276.5235 598.9444,-274.2608 596.4444,-274.2735 596.4444,-274.2735 596.4444,-274.2735 598.9444,-274.2608 596.433,-272.0235 601.4443,-274.248 601.4443,-274.248"/>
 </g>
 <!-- safe&#45;api&#45;&gt;safe&#45;api -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>safe&#45;api:K_safe&#45;cli&#45;&gt;safe&#45;api:K_safe&#45;api</title>
 <path fill="none" stroke="#c0c0c0" d="M601.4443,-295.2744C566.4427,-295.7578 533.5,-291.1875 533.5,-279 533.5,-267.4314 563.1819,-262.726 596.132,-262.6914"/>
 <polygon fill="#c0c0c0" stroke="#c0c0c0" points="601.4443,-262.7256 596.4299,-264.9432 598.9444,-262.7094 596.4444,-262.6933 596.4444,-262.6933 596.4444,-262.6933 598.9444,-262.7094 596.459,-260.4433 601.4443,-262.7256 601.4443,-262.7256"/>
 </g>
 <!-- safe&#45;api&#45;&gt;safe&#45;api -->
-<g id="edge29" class="edge">
+<g id="edge30" class="edge">
 <title>safe&#45;api:K_safe&#45;api&#45;&gt;safe&#45;api:K_jsonrpc&#45;quic</title>
 <path fill="none" stroke="#c0c0c0" d="M601.4443,-273.1406C566.4427,-271.7344 533.5,-262.125 533.5,-236.5 533.5,-212.1763 563.1819,-202.2829 596.132,-200.1381"/>
 <polygon fill="#c0c0c0" stroke="#c0c0c0" points="601.4443,-199.8594 596.5691,-202.3683 598.9478,-199.9904 596.4512,-200.1214 596.4512,-200.1214 596.4512,-200.1214 598.9478,-199.9904 596.3333,-197.8745 601.4443,-199.8594 601.4443,-199.8594"/>
@@ -313,14 +321,14 @@
 <!-- safe&#45;browser -->
 <g id="node13" class="node">
 <title>safe&#45;browser</title>
-<polygon fill="none" stroke="#000000" points="22.5,-326.5 22.5,-362.5 145.5,-362.5 145.5,-326.5 22.5,-326.5"/>
-<text text-anchor="middle" x="84" y="-341.4" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;browser</text>
+<polygon fill="none" stroke="#000000" points="22.5,-296.5 22.5,-332.5 145.5,-332.5 145.5,-296.5 22.5,-296.5"/>
+<text text-anchor="middle" x="84" y="-311.4" font-family="verdana" font-size="12.00" fill="#000000">safe&#45;browser</text>
 </g>
 <!-- safe&#45;browser&#45;&gt;safe&#45;nodejs -->
-<g id="edge35" class="edge">
+<g id="edge36" class="edge">
 <title>safe&#45;browser:K_safe&#45;browser&#45;&gt;safe&#45;nodejs:K_safe&#45;nodejs</title>
-<path fill="none" stroke="#006400" d="M145.7938,-344.5C192.0991,-344.5 255.2107,-344.5 301.6499,-344.5"/>
-<polygon fill="#006400" stroke="#006400" points="306.6582,-344.5 301.6582,-346.7501 304.1582,-344.5 301.6582,-344.5001 301.6582,-344.5001 301.6582,-344.5001 304.1582,-344.5 301.6581,-342.2501 306.6582,-344.5 306.6582,-344.5"/>
+<path fill="none" stroke="#006400" d="M145.5246,-314.5C188.9069,-314.5 248.5468,-314.5 301.8611,-314.5"/>
+<polygon fill="#006400" stroke="#006400" points="307,-314.5 302,-316.7501 304.5,-314.5 302,-314.5001 302,-314.5001 302,-314.5001 304.5,-314.5 302,-312.2501 307,-314.5 307,-314.5"/>
 </g>
 </g>
 </svg>
