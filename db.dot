@@ -93,7 +93,7 @@ digraph g {
 "sn_api":"K_sn_cli" -> "sn_api":"K_sn_api"	[color="grey"]
 "sn_mobile_browser":"K_sn_mobile_browser" -> "sn_csharp":"K_sn_csharp"
 "sn_nodejs":"K_native" -> "sn_api":"K_sn_api"
-"sn_authenticator_mobile":"K_sn_authenticator_mobile" -> "sn_client":"K_sn_client"
+"sn_authenticator_mobile":"K_sn_authenticator_mobile" -> "sn_csharp":"K_sn_csharp"
 "sn_api":"K_sn_api" -> "sn_api":"K_qjsonrpc"	[color="grey"]
 "sn_api":"K_sn_api" -> "sn_client":"K_sn_client"
 "sn_node":"K_sn_node" -> "sn_data_types":"K_sn_data_types"
