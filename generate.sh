@@ -115,7 +115,7 @@ do
     elif [ $repo == "sn_authenticator_mobile" ]
     then
         echo "Special case $repo"
-        repos_dependencies[$repo]="sn_client"
+        repos_dependencies[$repo]="sn_csharp"
     elif [ $repo == "sn_mobile_browser" ]
     then
         echo "Special case $repo"
