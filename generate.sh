@@ -1,8 +1,9 @@
 # List of repositories to analyze
 # Note: A dictionary instead of an array (possible future usage: an alias name for a repo having an internal name different from its external name)
 declare -A repos
-repos=([safe-browser]="" [safe-nodejs]="" [safe-api]="" [safe-client-libs]="" [quic-p2p]="" [safe-vault]="" [routing]=""
-[safe-nd]="" [self_encryption]="" [parsec]="" [safe-app-csharp]="" [safe-authenticator-mobile]="" [safe-mobile-browser]="")
+repos=([sn_browser]="" [sn_nodejs]="" [sn_api]="" [sn_client]="" [qp2p]="" [sn_node]="" [sn_routing]=""
+[sn_data_types]="" [self_encryption]="" [sn_csharp]="" [sn_authenticator_mobile]="" [sn_mobile_browser]=""
+[bls_dkg]="" [sn_ffi_utils]="")
 
 # Output file
 dot=db.dot
@@ -95,8 +96,8 @@ function set_repos_in_workspace () {
 
 for repo in "${!repos[@]}"
 do
-    # No root key for safe-api (because it is both a root crate and a sub-crate)
-    if [ $repo == "safe-api" ]
+    # No root key for sn_api (because it is both a root crate and a sub-crate)
+    if [ $repo == "sn_api" ]
     then
         root_key=""
     else
@@ -104,20 +105,25 @@ do
     fi
     printf "\n\"$repo\" [\n  label = \"$root_key\\N" >> $dot
     # Special cases for C# repos
-    if [ $repo == "safe-app-csharp" ]
+    if [ $repo == "sn_csharp" ]
     then
         echo "Special case $repo"
-        set_repos_in_workspace SafeApp SafeApp.AppBindings SafeApp.Core
-        repos_dependencies["SafeApp.AppBindings"]="SafeApp.Core safe-ffi"
+        set_repos_in_workspace SafeApp SafeApp.AppBindings SafeAuthenticator SafeApp.Core
+        repos_dependencies["SafeApp.AppBindings"]="SafeApp.Core sn_ffi"
         repos_dependencies["SafeApp"]="SafeApp.AppBindings SafeApp.Core"
-    elif [ $repo == "safe-authenticator-mobile" ]
+        repos_dependencies["SafeAuthenticator"]="SafeApp.Core sn_ffi"
+    elif [ $repo == "sn_authenticator_mobile" ]
     then
         echo "Special case $repo"
-        repos_dependencies[$repo]="safe_authenticator_ffi"
-    elif [ $repo == "safe-mobile-browser" ]
+        repos_dependencies[$repo]="sn_client"
+    elif [ $repo == "sn_mobile_browser" ]
     then
         echo "Special case $repo"
-        repos_dependencies[$repo]="safe-app-csharp"
+        repos_dependencies[$repo]="sn_csharp"
+    elif [ $repo == "sn_browser" ]
+    then
+        echo "TODO: Temporary special case $repo (until package.json references sn_nodejs instead of safe-nodejs"
+        repos_dependencies[$repo]="sn_nodejs"
     else
         echo "Analyzing $repo"
         # Test if it is a Rust repo by testing the most used language
@@ -130,7 +136,7 @@ do
             curl -s "https://raw.githubusercontent.com/maidsafe/$repo/$default_branch/Cargo.toml" > Cargo.toml
             if [ "$(<Cargo.toml)" == "404: Not Found" ]
             then
-                # No Cargo.toml file at the root. This means it is a mixed repo like safe-nodejs (Rust + Javascript)
+                # No Cargo.toml file at the root. This means it is a mixed repo like sn_nodejs (Rust + Javascript)
                 dependencies=""
             else
                 # This one could be null also (for a Rust repo with a workspace)
