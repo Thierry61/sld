@@ -8,9 +8,6 @@ repos=([sn_browser]="" [sn_nodejs]="" [sn_api]="" [sn_client]="" [qp2p]="" [sn_n
 # Output file
 dot=db.dot
 
-# toml path
-toml=toml-cli/target/debug/toml
-
 # Dot file header
 cat > $dot <<END_OF_HEADER
 digraph g {
@@ -33,15 +30,8 @@ digraph g {
   ];
 END_OF_HEADER
 
-# Download and build toml-cli if not already done
-if [ ! -f "$toml" ]
-then
-    rm -rf toml-cli
-    git clone https://github.com/gnprice/toml-cli
-    cd toml-cli
-    cargo build
-    cd ..
-fi
+# Install rq
+cargo install record-query
 
 # - key is sub-repo name
 # - value is repo name
@@ -140,7 +130,7 @@ do
                 dependencies=""
             else
                 # This one could be null also (for a Rust repo with a workspace)
-                dependencies=$($toml get Cargo.toml dependencies)
+                dependencies=$(cat Cargo.toml | rq -tJ | jq -r '.dependencies')
                 if [ $(echo $dependencies | jq -r 'length') -ne 0 ]
                 then
                     dependencies=$(echo $dependencies | jq -r 'keys[]')
@@ -159,7 +149,7 @@ do
                     rm contents.txt
                 else
                     # Rust repo with a workspace => get [workspace] members
-                    subdirs=$($toml get Cargo.toml workspace.members | jq -r '.[]')
+                    subdirs=$(cat Cargo.toml | rq -tJ | jq -r '.workspace.members | .[]')
                 fi
                 for subdir in $subdirs
                 do
@@ -171,7 +161,7 @@ do
                         if [ "$(<Cargo.toml)" != "404: Not Found" ]
                         then
                             set_repos_in_workspace $subdir
-                            repos_dependencies[$subdir]=$($toml get Cargo.toml dependencies | jq -r 'keys[]')
+                            repos_dependencies[$subdir]=$(cat Cargo.toml | rq -tJ | jq -r '.dependencies | keys[]')
                         fi
                     fi
                 done
