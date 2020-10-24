@@ -3,7 +3,7 @@
 declare -A repos
 repos=([sn_browser]="" [sn_nodejs]="" [sn_api]="" [sn_client]="" [qp2p]="" [sn_node]="" [sn_routing]=""
 [sn_data_types]="" [self_encryption]="" [sn_csharp]="" [sn_authenticator_mobile]="" [sn_mobile_browser]=""
-[bls_dkg]="" [sn_ffi_utils]="")
+[bls_dkg]="" [xor_name]=""])
 
 # Output file
 dot=db.dot
@@ -99,9 +99,9 @@ do
     then
         echo "Special case $repo"
         set_repos_in_workspace SafeApp SafeApp.AppBindings SafeAuthenticator SafeApp.Core
-        repos_dependencies["SafeApp.AppBindings"]="SafeApp.Core sn_ffi"
+        repos_dependencies["SafeApp.AppBindings"]="SafeApp.Core sn_api"
         repos_dependencies["SafeApp"]="SafeApp.AppBindings SafeApp.Core"
-        repos_dependencies["SafeAuthenticator"]="SafeApp.Core sn_ffi"
+        repos_dependencies["SafeAuthenticator"]="SafeApp.Core"
     elif [ $repo == "sn_authenticator_mobile" ]
     then
         echo "Special case $repo"
