@@ -99,7 +99,6 @@ digraph g {
 "sn_api":"K_sn_api" -> "sn_client":"K_sn_client"
 "sn_api":"K_sn_api" -> "sn_data_types":"K_sn_data_types"
 "sn_api":"K_sn_api" -> "xor_name":"K_xor_name"
-"sn_node":"K_sn_node" -> "self_encryption":"K_self_encryption"
 "sn_node":"K_sn_node" -> "sn_data_types":"K_sn_data_types"
 "sn_node":"K_sn_node" -> "sn_routing":"K_sn_routing"
 "sn_node":"K_sn_node" -> "xor_name":"K_xor_name"
